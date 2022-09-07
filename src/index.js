@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   function fetchToyData(){
-    fetch('http://localhost:3000/toys')
-    .then(response => response.json())
+    fetch('http://localhost:3000/toys') //fetch returns a promise
+    .then(response => response.json()) //.then returning a new promise. .json converts into js OBJ.
     .then(data => data.forEach(renderToy)
     )
     .catch(console.error)
