@@ -32,12 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const h2 = document.createElement('h2');
     const img = document.createElement('img');
     const p = document.createElement('p');
+    const btn = document.createElement('button');
+
+    btn.className = "like-btn";
+    btn.setAttribute('id', '[toy_id]');
+    btn.textContent = 'like ❤️'
+    
+    img.className = "toy-avatar";
 
     h2.textContent = data.name;
     img.src = data.image;
     p.textContent = `Likes: ${data.likes}`;
 
-    toyContainer.append(h2, img, p)
+    toyContainer.append(h2, img, p, btn)
   };
 
   renderToy(fetchToyData());
