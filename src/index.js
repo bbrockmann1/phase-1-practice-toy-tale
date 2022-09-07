@@ -15,17 +15,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  function fetchToyData(url){
-    fetch(url)
+  function fetchToyData(){
+    fetch('http://localhost:3000/toys')
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => data.forEach(renderToy)
+    )
+    .catch(console.error)
   }
-  fetchToyData('http://localhost:3000/toys');
+  fetchToyData();
 
   function renderToy(data){
     const toyContainer = document.getElementById('toy-collection');
+    console.log(toyContainer);
     
+    
+    const h2 = document.createElement('h2');
+    const img = document.createElement('img');
+    const p = document.createElement('p');
+
+    h2.textContent = data.name;
+    img.src = data.image;
+    p.textContent = `Likes: ${data.likes}`;
+
+    toyContainer.append(h2, img, p)
   };
+
+  renderToy(fetchToyData());
+
 });
 
 
