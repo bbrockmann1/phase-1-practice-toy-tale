@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
   }
 
+  function updateToyLIkes(){};
 
 
 
@@ -92,6 +93,12 @@ function renderToyCard(toy){
       toyCollection.append(div);
       
       div.append(h2, img, p, button);
+
+      button.addEventListener('click', () => {
+        p.textContent = `${++toy.likes} likes`
+        console.log(toy.likes)
+      });
 }
+
 
 })
