@@ -27,7 +27,7 @@
     {
       "id": 5,
       "name": "Rex",
-      "image": "https://static.wikia.nocookie.net/disney/images/5/56/Profile_-_Rex.jpeg/revision/latest?cb=20190313050619",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-1pw6dak_23081c6b.jpeg?region=0,0,450,450",
       "likes": 1
     },
     {
@@ -47,6 +47,12 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": 1
+    },
+    {
+      "name": "Jessie",
+      "image": "http://cdn.shopify.com/s/files/1/0600/0141/9429/products/pofsbri3zkksjsxunk9n_36601e69-6fee-4baf-95a6-3011d794d452.jpg?v=1660227081",
+      "likes": 0,
+      "id": 9
     }
   ]
 }
